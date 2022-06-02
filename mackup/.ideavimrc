@@ -1,0 +1,92 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+Plug 'machakann/vim-highlightedyank'
+
+set scrolloff=7
+set noerrorbells
+set visualbell
+set incsearch
+set hlsearch
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+let mapleader=" "
+
+nnoremap <leader>n :nohl<CR>
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+xmap <Leader>p "_dP
+
+nmap <Leader>y "+y
+vmap <Leader>y "+y
+vmap <Leader>Y "+Y
+
+nmap <Leader>d "_d
+vmap <Leader>d "_d
+
+vnoremap J :action MoveLineDown<cr>
+vnoremap K :action MoveLineUp<cr>
+
+nmap ff :action GotoFile<cr>
+nmap fe :action RecentChangedFiles<CR>
+
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+
+nnoremap gt :action GotoTest<CR>
+
+vmap < <gv
+vmap > >gv
+
+nmap <c-o> <Action>(Back)
+nmap <c-i> <Action>(Forward)
+
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(GotoReference)
+
+nmap Y y$
+
+nmap ]] :action GotoNextError<CR>
+
+nmap <leader>rn :action RenameElement<CR>
+nmap <leader>rev :action IntroduceVariable<CR>
+vmap <leader>rev :action IntroduceVariable<CR>
+nmap <leader>rem :action ExtractMethod<CR>
+vmap <leader>rem :action ExtractMethod<CR>
+nmap <leader>rm :action Move<CR>
+nmap <leader>ro :action OptimizeImports<CR>
+nmap <leader>rg :action Generate<CR>
+
+nmap <leader>rh :action Vcs.RollbackChangedLines<CR>
+
+nmap gl <Action>(ShowErrorDescription)
+vmap gl <Action>(ShowErrorDescription)
+
+nmap <leader>gb :action Git.Branches<CR>
+nmap <leader>ga :action Annotate<CR>
+
+" Debug & Run
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,F :action ChooseDebugConfiguration<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>

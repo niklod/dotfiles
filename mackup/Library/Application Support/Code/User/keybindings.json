@@ -1,0 +1,139 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+e",
+        "command": "revealInExplorer"
+    },
+    {
+        "key": "o",
+        "command": "revealReference",
+        "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+    },
+    {
+        "key": "enter",
+        "command": "-revealReference",
+        "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.scm'"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.scm'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "activeViewlet == 'workbench.view.scm'"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.debug'"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.debug'"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.extensions'"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.extensions'"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+]

@@ -1,0 +1,311 @@
+{
+    "projectManager.git.baseFolders": [
+        "~/code/src/",
+        "~/.config/vscode"
+    ],
+    "workbench.colorTheme": "One Dark Pro",
+    "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    "vim.highlightedyank.textColor": "rgba(255, 200, 71, 0.3)",
+    "vim.leader": " ",
+    "vim.vimrc.path": "$HOME/.config/nvim/init.lua",
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+    "vim.searchHighlightColor": "rgba(112, 184, 76, 0.51)",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.glyphMargin": true,
+    "editor.renderLineHighlight": "none",
+    "workbench.editor.showTabs": false,
+    // Normal mode block
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "f",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "f",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.showAllEditorsByMostRecentlyUsed"
+            ]
+        },
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "f",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "go.toggle.test.file"
+            ]
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<C-w>",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<C-w>",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "n"
+            ],
+            "commands": [
+                ":noh"
+            ]
+        },
+        {
+            "before": [
+                "<TAB>"
+            ],
+            "commands": [
+                ":tabnext"
+            ]
+        },
+        {
+            "before": [
+                "<S-TAB>"
+            ],
+            "commands": [
+                ":tabprev"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<C-e>",
+            ],
+            "commands": [
+                "revealInExplorer"
+            ]
+        }
+    ],
+    // Visual block
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    // Operator pending block
+    "vim.operatorPendingModeKeyBindings": [
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "("
+            ],
+            "after": [
+                "i("
+            ]
+        },
+        {
+            "before": [
+                "{"
+            ],
+            "after": [
+                "i{"
+            ]
+        }
+    ],
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "fish": {
+            "path": "/opt/homebrew/bin/fish", // overriding
+            "args": [
+                "-l"
+            ]
+        }
+    },
+    "projectManager.any.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+    ],
+    "vim.enableNeovim": true,
+    "editor.fontFamily": "SauceCodePro Nerd Font",
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "breadcrumbs.enabled": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "go.autocompleteUnimportedPackages": true,
+    "go.formatTool": "goimports",
+    "go.lintOnSave": "file",
+    "go.lintTool": "revive",
+    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "gitlens.mode.active": "review",
+    "window.menuBarVisibility": "toggle",
+    "editor.fontSize": 13,
+    "workbench.startupEditor": "none",
+    "editor.guides.indentation": false,
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.inlineSuggest.enabled": true,
+    "git.confirmSync": false,
+    "go.toolsManagement.autoUpdate": true,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/niklod/.config/nvim",
+}
