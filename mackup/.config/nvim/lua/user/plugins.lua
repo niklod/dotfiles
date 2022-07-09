@@ -45,32 +45,38 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use "nvim-lua/popup.nvim"
     use 'navarasu/onedark.nvim'
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
     use 'nvim-lua/plenary.nvim'
-    use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
+    use 'tpope/vim-commentary'
+    use 'jiangmiao/auto-pairs'
+    -- use 'tpope/vim-fugitive'
+    -- use "Pocco81/AutoSave.nvim"
 
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use {'nvim-telescope/telescope-file-browser.nvim' }
     use 'nvim-telescope/telescope-dap.nvim'
     use {'gbrlsnchs/telescope-lsp-handlers.nvim' }
-    use {
-      "nvim-telescope/telescope-frecency.nvim",
-      config = function()
-        require"telescope".load_extension("frecency")
-      end,
-      requires = {"tami5/sqlite.lua"}
-    }
+    -- use {
+    --   "nvim-telescope/telescope-frecency.nvim",
+    --   config = function()
+    --     require"telescope".load_extension("frecency")
+    --   end,
+    --   requires = {"tami5/sqlite.lua"}
+    -- }
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
     use { 'ThePrimeagen/harpoon', requires = { 'nvim-lua/plenary.nvim' } }
-    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use { 'tpope/vim-surround' }
+
+    -- Markdown
+    use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
 
     -- Movements
     use { 'phaazon/hop.nvim', branch = 'v1' }
@@ -92,7 +98,6 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
-    use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use "b0o/schemastore.nvim"
 
@@ -101,8 +106,6 @@ return packer.startup(function(use)
     use 'rafamadriz/friendly-snippets'
 
     use 'christoomey/vim-tmux-navigator'
-    use 'tpope/vim-commentary'
-    use 'jiangmiao/auto-pairs'
 
     use 'kyazdani42/nvim-web-devicons'
     use {

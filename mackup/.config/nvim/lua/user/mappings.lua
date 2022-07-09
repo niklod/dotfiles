@@ -1,6 +1,6 @@
 local v = vim.api
 
-default_opts = { noremap = true, silent = true }
+local default_opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -72,7 +72,7 @@ v.nvim_set_keymap('n', '<Leader>gq', ':DiffviewClose<CR>', default_opts)
 -- v.nvim_set_keymap('n', 'gf', ':diffget //2', default_opts)
 
 -- Harpoon
-v.nvim_set_keymap('n', '<Leader>r', [[<Cmd>lua require('harpoon.mark').add_file()<CR>]], default_opts)
+v.nvim_set_keymap('n', 'rr', [[<Cmd>lua require('harpoon.mark').add_file()<CR>]], default_opts)
 v.nvim_set_keymap('n', '<C-e>', [[<Cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>]], default_opts)
 v.nvim_set_keymap('n', '<Leader>1', [[<Cmd>lua require('harpoon.ui').nav_file(1)<CR>]], default_opts)
 v.nvim_set_keymap('n', '<Leader>2', [[<Cmd>lua require('harpoon.ui').nav_file(2)<CR>]], default_opts)

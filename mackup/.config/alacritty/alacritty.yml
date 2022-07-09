@@ -24,7 +24,7 @@ window:
 
 font:
   normal:
-    family: 'SFMono Nerd Font'
+    family: "SFMono Nerd Font"
     style: Regular
   size: 14.0
   use_thin_strokes: true

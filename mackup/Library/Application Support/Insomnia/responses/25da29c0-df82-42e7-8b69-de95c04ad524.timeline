@@ -1,0 +1,167 @@
+[
+	{
+		"value": "Preparing request to https://la.int.mobalytics.gg/query",
+		"name": "TEXT",
+		"timestamp": 1657210674709
+	},
+	{
+		"value": "Current time is 2022-07-07T16:17:54.709Z",
+		"name": "TEXT",
+		"timestamp": 1657210674709
+	},
+	{
+		"value": "Enable automatic URL encoding",
+		"name": "TEXT",
+		"timestamp": 1657210674709
+	},
+	{
+		"value": "Using default HTTP version",
+		"name": "TEXT",
+		"timestamp": 1657210674711
+	},
+	{
+		"value": "Enable SSL validation",
+		"name": "TEXT",
+		"timestamp": 1657210674711
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: INIT => CONNECT handle 0x1398acc08; line 1789 (connection #-5000)\n",
+		"timestamp": 1657210674711
+	},
+	{
+		"name": "TEXT",
+		"value": "Found bundle for host la.int.mobalytics.gg: 0x600003f10bc8 [can multiplex]\n",
+		"timestamp": 1657210674712
+	},
+	{
+		"name": "TEXT",
+		"value": "Re-using existing connection! (#1) with host la.int.mobalytics.gg\n",
+		"timestamp": 1657210674712
+	},
+	{
+		"name": "TEXT",
+		"value": "Connected to la.int.mobalytics.gg (10.186.0.157) port 443 (#1)\n",
+		"timestamp": 1657210674712
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: CONNECT => DO handle 0x1398acc08; line 1843 (connection #1)\n",
+		"timestamp": 1657210674712
+	},
+	{
+		"name": "TEXT",
+		"value": "Using Stream ID: 3 (easy handle 0x1398acc08)\n",
+		"timestamp": 1657210674712
+	},
+	{
+		"name": "HEADER_OUT",
+		"value": "POST /query HTTP/2\r\nHost: la.int.mobalytics.gg\r\nuser-agent: insomnia/2022.4.2\r\ncontent-type: application/json\r\naccept: */*\r\ncontent-length: 340\r\n\r\n",
+		"timestamp": 1657210674713
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: DO => DID handle 0x1398acc08; line 2077 (connection #1)\n",
+		"timestamp": 1657210674713
+	},
+	{
+		"name": "TEXT",
+		"value": "multi changed, check CONNECT_PEND queue!\n",
+		"timestamp": 1657210674713
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: DID => PERFORMING handle 0x1398acc08; line 2196 (connection #1)\n",
+		"timestamp": 1657210674713
+	},
+	{
+		"name": "DATA_OUT",
+		"value": "{\"query\":\"query {\\n\\tlostArk {\\n\\t\\tgame {\\n\\t\\t\\tbuild {\\n\\t\\t\\t\\tlist {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tslug\\n\\t\\t\\t\\t\\tcardSets {\\n\\t\\t\\t\\t\\t\\titems {\\n\\t\\t\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t\\terror {\\n\\t\\t\\t\\t\\t\\t\\tmessage\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\terror {\\n\\t\\t\\t\\t\\t__typename\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\"}",
+		"timestamp": 1657210674713
+	},
+	{
+		"name": "TEXT",
+		"value": "We are completely uploaded and fine\n",
+		"timestamp": 1657210674713
+	},
+	{
+		"name": "TEXT",
+		"value": "HTTP/2 found, allow multiplexing\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "HTTP/2 200 \r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "content-type: application/json\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "x-moba-monitoring-endpoint: POST /query\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "x-request-id: 1fcbc5ef-aa93-98b2-9f17-303e19cd74be\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "date: Thu, 07 Jul 2022 16:17:54 GMT\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "content-length: 171\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "x-envoy-upstream-service-time: 4\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "server: istio-envoy\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "\r\n",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 171 B chunk",
+		"timestamp": 1657210674868
+	},
+	{
+		"name": "TEXT",
+		"value": "nread == 0, stream closed, bailing\n",
+		"timestamp": 1657210674869
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: PERFORMING => DONE handle 0x1398acc08; line 2395 (connection #1)\n",
+		"timestamp": 1657210674869
+	},
+	{
+		"name": "TEXT",
+		"value": "multi_done\n",
+		"timestamp": 1657210674869
+	},
+	{
+		"name": "TEXT",
+		"value": "Connection #1 to host la.int.mobalytics.gg left intact\n",
+		"timestamp": 1657210674869
+	},
+	{
+		"name": "TEXT",
+		"value": "Expire cleared (transfer 0x1398acc08)\n",
+		"timestamp": 1657210674869
+	}
+]

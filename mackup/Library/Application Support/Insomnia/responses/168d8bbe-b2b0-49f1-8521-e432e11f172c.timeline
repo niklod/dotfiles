@@ -1,0 +1,232 @@
+[
+	{
+		"value": "Preparing request to https://la.int.mobalytics.gg/query",
+		"name": "TEXT",
+		"timestamp": 1657208035075
+	},
+	{
+		"value": "Current time is 2022-07-07T15:33:55.075Z",
+		"name": "TEXT",
+		"timestamp": 1657208035075
+	},
+	{
+		"value": "Enable automatic URL encoding",
+		"name": "TEXT",
+		"timestamp": 1657208035075
+	},
+	{
+		"value": "Using default HTTP version",
+		"name": "TEXT",
+		"timestamp": 1657208035076
+	},
+	{
+		"value": "Enable SSL validation",
+		"name": "TEXT",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: INIT => CONNECT handle 0x13882f808; line 1789 (connection #-5000)\n",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "TEXT",
+		"value": "Found bundle for host la.int.mobalytics.gg: 0x600003fe15c8 [can multiplex]\n",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "TEXT",
+		"value": "Re-using existing connection! (#0) with host la.int.mobalytics.gg\n",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "TEXT",
+		"value": "Connected to la.int.mobalytics.gg (10.186.0.157) port 443 (#0)\n",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: CONNECT => DO handle 0x13882f808; line 1843 (connection #0)\n",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "TEXT",
+		"value": "Using Stream ID: 3 (easy handle 0x13882f808)\n",
+		"timestamp": 1657208035076
+	},
+	{
+		"name": "HEADER_OUT",
+		"value": "POST /query HTTP/2\r\nHost: la.int.mobalytics.gg\r\nuser-agent: insomnia/2022.4.2\r\ncontent-type: application/json\r\naccept: */*\r\ncontent-length: 1811\r\n\r\n",
+		"timestamp": 1657208035077
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: DO => DID handle 0x13882f808; line 2077 (connection #0)\n",
+		"timestamp": 1657208035077
+	},
+	{
+		"name": "TEXT",
+		"value": "multi changed, check CONNECT_PEND queue!\n",
+		"timestamp": 1657208035077
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: DID => PERFORMING handle 0x13882f808; line 2196 (connection #0)\n",
+		"timestamp": 1657208035077
+	},
+	{
+		"name": "DATA_OUT",
+		"value": "{\"query\":\"\\n    query IntrospectionQuery {\\n      __schema {\\n        \\n        queryType { name }\\n        mutationType { name }\\n        subscriptionType { name }\\n        types {\\n          ...FullType\\n        }\\n        directives {\\n          name\\n          description\\n          \\n          locations\\n          args {\\n            ...InputValue\\n          }\\n        }\\n      }\\n    }\\n\\n    fragment FullType on __Type {\\n      kind\\n      name\\n      description\\n      \\n      fields(includeDeprecated: true) {\\n        name\\n        description\\n        args {\\n          ...InputValue\\n        }\\n        type {\\n          ...TypeRef\\n        }\\n        isDeprecated\\n        deprecationReason\\n      }\\n      inputFields {\\n        ...InputValue\\n      }\\n      interfaces {\\n        ...TypeRef\\n      }\\n      enumValues(includeDeprecated: true) {\\n        name\\n        description\\n        isDeprecated\\n        deprecationReason\\n      }\\n      possibleTypes {\\n        ...TypeRef\\n      }\\n    }\\n\\n    fragment InputValue on __InputValue {\\n      name\\n      description\\n      type { ...TypeRef }\\n      defaultValue\\n      \\n      \\n    }\\n\\n    fragment TypeRef on __Type {\\n      kind\\n      name\\n      ofType {\\n        kind\\n        name\\n        ofType {\\n          kind\\n          name\\n          ofType {\\n            kind\\n            name\\n            ofType {\\n              kind\\n              name\\n              ofType {\\n                kind\\n                name\\n                ofType {\\n                  kind\\n                  name\\n                  ofType {\\n                    kind\\n                    name\\n                  }\\n                }\\n              }\\n            }\\n          }\\n        }\\n      }\\n    }\\n  \",\"operationName\":\"IntrospectionQuery\"}",
+		"timestamp": 1657208035077
+	},
+	{
+		"name": "TEXT",
+		"value": "We are completely uploaded and fine\n",
+		"timestamp": 1657208035077
+	},
+	{
+		"name": "TEXT",
+		"value": "HTTP/2 found, allow multiplexing\n",
+		"timestamp": 1657208035382
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "HTTP/2 200 \r\n",
+		"timestamp": 1657208035382
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "content-type: application/json\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "x-moba-monitoring-endpoint: POST /query\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "x-request-id: 2878bb21-c4c3-91a3-80db-4019f83b57c0\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "date: Thu, 07 Jul 2022 15:33:55 GMT\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "x-envoy-upstream-service-time: 12\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "server: istio-envoy\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "\r\n",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 15.8 KB chunk",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 152 B chunk",
+		"timestamp": 1657208035383
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035384
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035384
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035385
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035386
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035388
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035389
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035389
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035389
+	},
+	{
+		"name": "TEXT",
+		"value": "Curl_readwrite: forcibly told to drain data\n",
+		"timestamp": 1657208035390
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 16 KB chunk",
+		"timestamp": 1657208035390
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 16 KB chunk",
+		"timestamp": 1657208035536
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 16 KB chunk",
+		"timestamp": 1657208035538
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 5.5 KB chunk",
+		"timestamp": 1657208035541
+	},
+	{
+		"name": "TEXT",
+		"value": "nread == 0, stream closed, bailing\n",
+		"timestamp": 1657208035541
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: PERFORMING => DONE handle 0x13882f808; line 2395 (connection #0)\n",
+		"timestamp": 1657208035541
+	},
+	{
+		"name": "TEXT",
+		"value": "multi_done\n",
+		"timestamp": 1657208035541
+	},
+	{
+		"name": "TEXT",
+		"value": "Connection #0 to host la.int.mobalytics.gg left intact\n",
+		"timestamp": 1657208035541
+	},
+	{
+		"name": "TEXT",
+		"value": "Expire cleared (transfer 0x13882f808)\n",
+		"timestamp": 1657208035541
+	}
+]

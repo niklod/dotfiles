@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["diffview.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/diffview.nvim",
-    url = "https://github.com/sindrets/diffview.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -148,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -224,11 +224,6 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
   },
-  ["sqlite.lua"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/sqlite.lua",
-    url = "https://github.com/tami5/sqlite.lua"
-  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
@@ -238,12 +233,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
-  },
-  ["telescope-frecency.nvim"] = {
-    config = { "\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\rfrecency\19load_extension\14telescope\frequire\0" },
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim",
-    url = "https://github.com/nvim-telescope/telescope-frecency.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -275,11 +264,6 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-delve",
     url = "https://github.com/sebdah/vim-delve"
   },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
-  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-repeat",
@@ -298,10 +282,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: telescope-frecency.nvim
-time([[Config for telescope-frecency.nvim]], true)
-try_loadstring("\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\rfrecency\19load_extension\14telescope\frequire\0", "config", "telescope-frecency.nvim")
-time([[Config for telescope-frecency.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
