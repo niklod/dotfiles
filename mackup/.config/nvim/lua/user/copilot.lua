@@ -1,0 +1,6 @@
+-- require("copilot").setup {
+--   cmp = {
+--     enabled = true,
+--     method = "getCompletionsCycling",
+--   }
+-- }
