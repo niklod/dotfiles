@@ -53,6 +53,11 @@
         "when": "explorerViewletFocus"
     },
     {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletFocus"
+    },
+    {
         "key": "d",
         "command": "deleteFile",
         "when": "explorerViewletFocus"

@@ -23,6 +23,25 @@
         {
             "before": [
                 "<Leader>",
+                "c"
+            ],
+            "commands": [
+                "git.commit"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "g",
+                "p"
+            ],
+            "commands": [
+                "git.push"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
                 "p"
             ],
             "commands": [
