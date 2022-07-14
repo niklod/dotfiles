@@ -1,9 +1,10 @@
 {
     "projectManager.git.baseFolders": [
         "~/code/src/",
-        "~/.config/vscode"
+        "~/code/notes",
+        "~/dotfiles"
     ],
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Atom One Dark",
     "vim.neovimPath": "/opt/homebrew/bin/nvim",
     "vim.highlightedyank.textColor": "rgba(255, 200, 71, 0.3)",
     "vim.leader": " ",
@@ -19,6 +20,15 @@
     "workbench.editor.showTabs": false,
     // Normal mode block
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<Leader>",
+                "p"
+            ],
+            "commands": [
+                "projectManager.listProjects"
+            ]
+        },
         {
             "before": [
                 "f",
@@ -289,7 +299,7 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "debug.allowBreakpointsEverywhere": true,
-    "terminal.external.osxExec": "iTerm.app",
+    "terminal.external.osxExec": "Alactirry.app",
     "go.autocompleteUnimportedPackages": true,
     "go.formatTool": "goimports",
     "go.lintOnSave": "file",
@@ -308,4 +318,10 @@
     "go.toolsManagement.autoUpdate": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/niklod/.config/nvim",
+    "vim.handleKeys": {
+        "<C-o>": false,
+        "<C-i>": false
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true
 }

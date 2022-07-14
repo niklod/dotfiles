@@ -43,9 +43,11 @@ v.nvim_set_keymap('v', '>', '>gv', default_opts)
 v.nvim_set_keymap('n', '<Leader>a', ':TSTextobjectSwapNext @parameter.inner<CR>', default_opts)
 v.nvim_set_keymap('n', '<Leader>A', ':TSTextobjectSwapPrevious @parameter.inner<CR>', default_opts)
 
-v.nvim_set_keymap('o', '<leader><Leader>', ":HopWord<CR>", {})
-v.nvim_set_keymap('n', '<leader><Leader>', ":HopWord<CR>", {})
-v.nvim_set_keymap('v', '<leader><Leader>', ":HopWord<CR>", {})
+v.nvim_set_keymap('o', 'fa', ":HopWord<CR>", {})
+v.nvim_set_keymap('n', 'fa', ":HopWord<CR>", {})
+v.nvim_set_keymap('v', 'fa', ":HopWord<CR>", {})
+
+v.nvim_set_keymap('n', '<leader>at', ":GoAddTag", {})
 
 v.nvim_set_keymap('n', '<Leader>so', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)
 
