@@ -28,6 +28,7 @@ fish_add_path bin
 fish_add_path ~/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.nvm
+fish_add_path ~/.config/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path $GOPATH/bin
 fish_add_path $GOROOT/bin
@@ -139,7 +140,9 @@ abbr yg "yarn generate"
 abbr yl "yarn lint"
 abbr yt "yarn test"
 abbr yu "yarn ui"
-abbr got "go test -v -run '^' ./"
+abbr got "go test -v -run '^\$' ./ &| pp"
+abbr t "sh t"
+abbr tt "sh tt"
 
 # tabtab source for packages
 # uninstall by removing these lines

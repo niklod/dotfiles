@@ -18,8 +18,18 @@
     "editor.glyphMargin": true,
     "editor.renderLineHighlight": "none",
     "workbench.editor.showTabs": false,
+    "editor.lineNumbers": "relative",
     // Normal mode block
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "g",
+                "l"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
         {
             "before": [
                 "<Leader>",
@@ -342,5 +352,12 @@
         "<C-i>": false
     },
     "workbench.iconTheme": "vscode-icons",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "github.copilot.advanced": {},
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": false
+    }
 }

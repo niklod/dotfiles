@@ -44,41 +44,32 @@ return packer.startup(function(use)
     use 'ray-x/guihua.lua'
     use 'wbthomason/packer.nvim'
     use "nvim-lua/popup.nvim"
-    use 'navarasu/onedark.nvim'
+    use 'rebelot/kanagawa.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-repeat'
     use 'tpope/vim-commentary'
-    use 'jiangmiao/auto-pairs'
-    -- use 'tpope/vim-fugitive'
-    -- use "Pocco81/AutoSave.nvim"
+    use 'windwp/nvim-autopairs'
     use 'dkarter/bullets.vim'
     use 'github/copilot.vim'
+    use 'ggandor/leap.nvim'
 
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use {'nvim-telescope/telescope-file-browser.nvim' }
     use 'nvim-telescope/telescope-dap.nvim'
     use {'gbrlsnchs/telescope-lsp-handlers.nvim' }
-    -- use {
-    --   "nvim-telescope/telescope-frecency.nvim",
-    --   config = function()
-    --     require"telescope".load_extension("frecency")
-    --   end,
-    --   requires = {"tami5/sqlite.lua"}
-    -- }
+    -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-textobjects'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    use { 'ThePrimeagen/harpoon', requires = { 'nvim-lua/plenary.nvim' } }
-    -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use { 'tpope/vim-surround' }
 
     -- Markdown
-    use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
+    -- use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
 
     -- Movements
     use { 'phaazon/hop.nvim', branch = 'v1' }
@@ -102,19 +93,19 @@ return packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'saadparwaiz1/cmp_luasnip'
     use "b0o/schemastore.nvim"
-    use {
-      "zbirenbaum/copilot.lua",
-      event = {"VimEnter"},
-      config = function()
-        vim.defer_fn(function()
-          require("copilot").setup()
-        end, 100)
-      end,
-    }
-    use {
-      "zbirenbaum/copilot-cmp",
-      module = "copilot_cmp",
-    }
+    -- use {
+    --   "zbirenbaum/copilot.lua",
+    --   event = {"VimEnter"},
+    --   config = function()
+    --     vim.defer_fn(function()
+    --       require("copilot").setup()
+    --     end, 100)
+    --   end,
+    -- }
+    -- use {
+    --   "zbirenbaum/copilot-cmp",
+    --   module = "copilot_cmp",
+    -- }
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'

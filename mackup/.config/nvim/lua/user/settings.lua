@@ -1,5 +1,7 @@
 local v = vim.api
 
+vim.cmd("colorscheme kanagawa")
+
 vim.opt.relativenumber = true
 vim.opt.autoread = true
 vim.opt.hidden = true
@@ -26,8 +28,8 @@ vim.opt.cursorline = true
 vim.opt.background = 'dark'
 vim.opt.showtabline = 2
 vim.opt.signcolumn = 'yes'
-vim.opt.updatetime = 300
-vim.opt.timeoutlen = 500
+vim.opt.updatetime = 3000
+vim.opt.timeoutlen = 250 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.incsearch = false
-vim.opt.guifont = 'Fira Code Nerd Font'
+vim.opt.guifont = 'SFMono Nerd Font'

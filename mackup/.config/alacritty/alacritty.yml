@@ -4,6 +4,35 @@ live_config_reload: true
 env:
   TERM: xterm-256color
 
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
+
+  # Normal colors
+  normal:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
+
+  # Bright colors
+  bright:
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xffffff'
+
 import:
   - ~/.config/alacritty/aw/current.yml
 
@@ -15,10 +44,10 @@ selection:
   save_to_clipboard: true
 
 window:
-  opacity: 0.95
+  opacity: 1
   padding:
-    x: 10
-    y: 10
+    x: 7
+    y: 7
   dynamic_padding: false
   decorations: buttonless
 
@@ -38,6 +67,7 @@ key_bindings:
   - { key: F, mods: Command, chars: "lfcd\n" }
   # Select a new tmux session for the attached client interactively
   - { key: K, mods: Command, chars: "\x02\x73" }
+  - { key: J, mods: Command, chars: "\x02\x54" }
   # Lazygit integration
   - { key: G, mods: Command, chars: "\x02\x67" }
   # Lazydocker integration
@@ -62,7 +92,7 @@ key_bindings:
   # Split the current pane into two, top and bottom.
   - { key: N, mods: Command, chars: "\x02\x22" }
   # Detach the current tmux client
-  - { key: Q, mods: Control, chars: "\x02\x64" }
+  - { key: Escape, mods: Control, chars: "\x02\x64" }
   # Change to the next tmux window
   - { key: RBracket, mods: Command|Shift, chars: "\x02\x6e" }
   # Type <escape>:w<enter> to save neovim

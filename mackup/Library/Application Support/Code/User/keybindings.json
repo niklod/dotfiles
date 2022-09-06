@@ -50,32 +50,67 @@
     {
         "key": "a",
         "command": "explorer.newFile",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "key": "r",
         "command": "renameFile",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "key": "d",
         "command": "deleteFile",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "key": "c",
         "command": "filesExplorer.copy",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "key": "x",
         "command": "filesExplorer.cut",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "key": "p",
         "command": "filesExplorer.paste",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "f",
+        "command": "filesExplorer.findInFolder",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "w",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "o",
+        "command": "list.select",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "y",
+        "command": "copyRelativeFilePath",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "shift+k",
+        "command": "editor.action.showPreviewHover",
+        "when": "editorFocus && !inputFocus && !editorHasSelection"
+    },
+    {
+        "key": "shift+y",
+        "command": "copyFilePath",
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "key": "ctrl+g",
@@ -135,26 +170,6 @@
         "key": "ctrl+x",
         "command": "-workbench.action.toggleSidebarVisibility",
         "when": "activeViewlet == 'workbench.view.extensions'"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus"
     },
     {
         "key": "ctrl+right",

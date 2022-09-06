@@ -51,6 +51,7 @@ cmp.setup {
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
+  preselect = cmp.PreselectMode.None,
   mapping = {
     ["<Up>"] = cmp.mapping.select_prev_item(),
     ["<Down>"] = cmp.mapping.select_next_item(),
@@ -65,7 +66,7 @@ cmp.setup {
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
     ["<CR>"] = cmp.mapping.confirm { select = false },
-    ["<Tab>"] = cmp.mapping.confirm { select = false },
+    ["<Tab>"] = cmp.mapping.confirm { select = true },
     ["<Leader>,"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -108,10 +109,10 @@ cmp.setup {
       end
 
       vim_item.menu = ({
+        luasnip = "[Snippet]",
         copilot = "[CP]",
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
-        luasnip = "[Snippet]",
         buffer = "[File]",
         path = "[Path]",
       })[entry.source.name]
@@ -119,10 +120,10 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "luasnip" },
     { name = "copilot" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
-    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
   },

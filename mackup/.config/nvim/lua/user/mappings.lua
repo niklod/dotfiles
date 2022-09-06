@@ -17,6 +17,15 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 v.nvim_set_keymap('n', 'n', 'nzzzv', default_opts)
 v.nvim_set_keymap('n', 'N', 'Nzzzv', default_opts)
 
+v.nvim_set_keymap("n", "H", "^", default_opts)
+v.nvim_set_keymap("n", "L", "$", default_opts)
+v.nvim_set_keymap("v", "H", "^", default_opts)
+v.nvim_set_keymap("v", "L", "$", default_opts)
+v.nvim_set_keymap("o", "H", "^", default_opts)
+v.nvim_set_keymap("o", "L", "$", default_opts)
+v.nvim_set_keymap("x", "H", "^", default_opts)
+v.nvim_set_keymap("x", "L", "$", default_opts)
+
 v.nvim_set_keymap("x", "J", ":move '>+1<CR>gv-gv", default_opts)
 v.nvim_set_keymap("x", "K", ":move '<-2<CR>gv-gv", default_opts)
 
@@ -43,9 +52,12 @@ v.nvim_set_keymap('v', '>', '>gv', default_opts)
 v.nvim_set_keymap('n', '<Leader>a', ':TSTextobjectSwapNext @parameter.inner<CR>', default_opts)
 v.nvim_set_keymap('n', '<Leader>A', ':TSTextobjectSwapPrevious @parameter.inner<CR>', default_opts)
 
-v.nvim_set_keymap('o', 'fa', ":HopWord<CR>", {})
+-- require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+
 v.nvim_set_keymap('n', 'fa', ":HopWord<CR>", {})
-v.nvim_set_keymap('v', 'fa', ":HopWord<CR>", {})
+v.nvim_set_keymap('n', 't', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>", default_opts)
+v.nvim_set_keymap('n', 'T', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>", default_opts)
+-- v.nvim_set_keymap('v', 't', ":HopChar2<CR>", {})
 
 v.nvim_set_keymap('n', '<leader>at', ":GoAddTag", {})
 
@@ -60,7 +72,7 @@ v.nvim_set_keymap('n', 'ff', ':Telescope find_files<CR>', default_opts)
 v.nvim_set_keymap('n', 'fl', ':Telescope live_grep<CR>', default_opts)
 v.nvim_set_keymap('n', 'gr', ':Telescope lsp_references<CR>', default_opts)
 v.nvim_set_keymap('n', 'fs', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)
-v.nvim_set_keymap("n", "fe", "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", default_opts)
+v.nvim_set_keymap("n", "fe", "<Cmd>lua require('telescope.builtin').buffers()<CR>", default_opts)
 
 -- Git
 v.nvim_set_keymap('n', '<Leader>gb', ':Telescope git_branches<CR>', default_opts)
@@ -70,17 +82,6 @@ v.nvim_set_keymap('n', '<Leader>rh', ':Gitsigns reset_hunk<CR>', default_opts)
 
 v.nvim_set_keymap('n', '<Leader>gd', ':DiffviewOpen<CR>', default_opts)
 v.nvim_set_keymap('n', '<Leader>gq', ':DiffviewClose<CR>', default_opts)
--- v.nvim_set_keymap('n', 'gj', ':diffget //3', default_opts)
--- v.nvim_set_keymap('n', 'gf', ':diffget //2', default_opts)
-
--- Harpoon
-v.nvim_set_keymap('n', 'rr', [[<Cmd>lua require('harpoon.mark').add_file()<CR>]], default_opts)
-v.nvim_set_keymap('n', '<C-e>', [[<Cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>]], default_opts)
-v.nvim_set_keymap('n', '<Leader>1', [[<Cmd>lua require('harpoon.ui').nav_file(1)<CR>]], default_opts)
-v.nvim_set_keymap('n', '<Leader>2', [[<Cmd>lua require('harpoon.ui').nav_file(2)<CR>]], default_opts)
-v.nvim_set_keymap('n', '<Leader>3', [[<Cmd>lua require('harpoon.ui').nav_file(3)<CR>]], default_opts)
-v.nvim_set_keymap('n', '<Leader>4', [[<Cmd>lua require('harpoon.ui').nav_file(4)<CR>]], default_opts)
-v.nvim_set_keymap('n', '<Leader>5', [[<Cmd>lua require('harpoon.ui').nav_file(5)<CR>]], default_opts)
 
 -- Debugger
 v.nvim_set_keymap('n', ',d', ':GoDebug<CR>', default_opts)
@@ -97,7 +98,6 @@ v.nvim_set_keymap('n', ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_
 v.nvim_set_keymap('n', '<Leader>du', [[<Cmd>lua require('dapui').toggle()<CR>]], default_opts)
 
 v.nvim_set_keymap('n', '<Leader>dl', [[<Cmd>lua require('dap.ext.vscode').load_launchjs("./launch.json",{})<CR>]], default_opts)
-v.nvim_set_keymap('n', 'd]', [[<Cmd>lua require('dap.ext.vscode').load_launchjs("./launch.json",{})<CR>]], default_opts)
 
 -- lsp
 v.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", default_opts)
