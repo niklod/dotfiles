@@ -5,7 +5,7 @@ vim.g.copilot_filetypes={ xml = false, markdown = false }
 -- using this table and only enable for a few filetypes a
 -- vim.g. copilot_filetypes = { ["*"] = false, python = true
 --
-vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.g.copilot_no_tab_map=true
 -- vim.keymap.set.keymap("i", "<C-a>", ":copilot#Accept('\ \<CR>")<CR>", { silent = true })
 

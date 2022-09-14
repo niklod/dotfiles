@@ -51,9 +51,9 @@ return packer.startup(function(use)
     use 'tpope/vim-repeat'
     use 'tpope/vim-commentary'
     use 'windwp/nvim-autopairs'
-    use 'dkarter/bullets.vim'
+    -- use 'dkarter/bullets.vim'
     use 'github/copilot.vim'
-    use 'ggandor/leap.nvim'
+    use 'powerman/vim-plugin-ruscmd'
 
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -69,10 +69,7 @@ return packer.startup(function(use)
     use { 'tpope/vim-surround' }
 
     -- Markdown
-    -- use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
-
-    -- Movements
-    use { 'phaazon/hop.nvim', branch = 'v1' }
+    use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
 
     -- Debug
     use 'sebdah/vim-delve'
@@ -93,19 +90,6 @@ return packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'saadparwaiz1/cmp_luasnip'
     use "b0o/schemastore.nvim"
-    -- use {
-    --   "zbirenbaum/copilot.lua",
-    --   event = {"VimEnter"},
-    --   config = function()
-    --     vim.defer_fn(function()
-    --       require("copilot").setup()
-    --     end, 100)
-    --   end,
-    -- }
-    -- use {
-    --   "zbirenbaum/copilot-cmp",
-    --   module = "copilot_cmp",
-    -- }
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'
@@ -114,10 +98,6 @@ return packer.startup(function(use)
     use 'christoomey/vim-tmux-navigator'
 
     use 'kyazdani42/nvim-web-devicons'
-    use {
-      "folke/trouble.nvim",
-      requires = "kyazdani42/nvim-web-devicons",
-    }
 
 
   -- Automatically set up your configuration after cloning packer.nvim

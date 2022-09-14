@@ -213,3 +213,7 @@ keybinding:
     init: 'i'
     update: 'u'
     bulkMenu: 'b'
+  customCommands:
+    - key: '<c-t>'
+      command: 'git pull && git push"'
+      context: 'pull && push'

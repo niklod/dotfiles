@@ -23,13 +23,11 @@ v.nvim_set_keymap("v", "H", "^", default_opts)
 v.nvim_set_keymap("v", "L", "$", default_opts)
 v.nvim_set_keymap("o", "H", "^", default_opts)
 v.nvim_set_keymap("o", "L", "$", default_opts)
-v.nvim_set_keymap("x", "H", "^", default_opts)
-v.nvim_set_keymap("x", "L", "$", default_opts)
 
-v.nvim_set_keymap("x", "J", ":move '>+1<CR>gv-gv", default_opts)
-v.nvim_set_keymap("x", "K", ":move '<-2<CR>gv-gv", default_opts)
+v.nvim_set_keymap("v", "J", ":move '>+1<CR>gv-gv", default_opts)
+v.nvim_set_keymap("v", "K", ":move '<-2<CR>gv-gv", default_opts)
 
-v.nvim_set_keymap("x", "<Leader>p", '"_dP', default_opts)
+v.nvim_set_keymap("v", "<Leader>p", '"_dP', default_opts)
 
 v.nvim_set_keymap("n", "<Leader>y", '"+y', default_opts)
 v.nvim_set_keymap("v", "<Leader>y", '"+y', default_opts)
@@ -62,10 +60,6 @@ v.nvim_set_keymap('n', 'T', ":lua require('hop').hint_words({ direction = requir
 v.nvim_set_keymap('n', '<leader>at', ":GoAddTag", {})
 
 v.nvim_set_keymap('n', '<Leader>so', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)
-
--- Diagnostics
-v.nvim_set_keymap('n', '<Leader>xx', ':TroubleToggle document_diagnostics<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>xw', ':TroubleToggle workspace_diagnostics<CR>', default_opts)
 
 -- Search
 v.nvim_set_keymap('n', 'ff', ':Telescope find_files<CR>', default_opts)
