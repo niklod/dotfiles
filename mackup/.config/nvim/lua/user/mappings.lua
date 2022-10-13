@@ -52,9 +52,9 @@ v.nvim_set_keymap('n', '<Leader>A', ':TSTextobjectSwapPrevious @parameter.inner<
 
 -- require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
 
-v.nvim_set_keymap('n', 'fa', ":HopWord<CR>", {})
-v.nvim_set_keymap('n', 't', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>", default_opts)
-v.nvim_set_keymap('n', 'T', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>", default_opts)
+-- v.nvim_set_keymap('n', 'fa', ":HopWord<CR>", {})
+-- v.nvim_set_keymap('n', 't', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>", default_opts)
+-- v.nvim_set_keymap('n', 'T', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>", default_opts)
 -- v.nvim_set_keymap('v', 't', ":HopChar2<CR>", {})
 
 v.nvim_set_keymap('n', '<leader>at', ":GoAddTag", {})

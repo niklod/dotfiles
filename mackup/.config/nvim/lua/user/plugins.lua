@@ -44,7 +44,8 @@ return packer.startup(function(use)
     use 'ray-x/guihua.lua'
     use 'wbthomason/packer.nvim'
     use "nvim-lua/popup.nvim"
-    use 'rebelot/kanagawa.nvim'
+    -- use 'rebelot/kanagawa.nvim'
+    use 'navarasu/onedark.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
     use 'nvim-lua/plenary.nvim'
@@ -64,6 +65,7 @@ return packer.startup(function(use)
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-textobjects'
+    use 'nvim-treesitter/nvim-treesitter-context'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
     use { 'tpope/vim-surround' }
@@ -90,6 +92,12 @@ return packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'saadparwaiz1/cmp_luasnip'
     use "b0o/schemastore.nvim"
+    use({
+      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+      config = function()
+        require("lsp_lines").setup()
+      end,
+    })
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'
