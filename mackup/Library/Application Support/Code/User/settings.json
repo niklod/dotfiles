@@ -4,7 +4,7 @@
         "~/code/notes",
         "~/dotfiles"
     ],
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "vim.neovimPath": "/opt/homebrew/bin/nvim",
     "vim.highlightedyank.textColor": "rgba(255, 200, 71, 0.3)",
     "vim.leader": " ",
@@ -56,6 +56,15 @@
             ],
             "commands": [
                 "projectManager.listProjects"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "u"
+            ],
+            "commands": [
+                "workbench.action.toggleActivityBarVisibility"
             ]
         },
         {
@@ -359,5 +368,7 @@
         "yaml": true,
         "plaintext": false,
         "markdown": false
-    }
+    },
+    "workbench.activityBar.visible": false,
+    "diffEditor.renderSideBySide": false
 }

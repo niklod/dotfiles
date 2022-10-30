@@ -44,7 +44,6 @@ return packer.startup(function(use)
     use 'ray-x/guihua.lua'
     use 'wbthomason/packer.nvim'
     use "nvim-lua/popup.nvim"
-    -- use 'rebelot/kanagawa.nvim'
     use 'navarasu/onedark.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
@@ -52,7 +51,6 @@ return packer.startup(function(use)
     use 'tpope/vim-repeat'
     use 'tpope/vim-commentary'
     use 'windwp/nvim-autopairs'
-    -- use 'dkarter/bullets.vim'
     use 'github/copilot.vim'
     use 'powerman/vim-plugin-ruscmd'
 
@@ -61,7 +59,6 @@ return packer.startup(function(use)
     use {'nvim-telescope/telescope-file-browser.nvim' }
     use 'nvim-telescope/telescope-dap.nvim'
     use {'gbrlsnchs/telescope-lsp-handlers.nvim' }
-    -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -70,8 +67,6 @@ return packer.startup(function(use)
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
     use { 'tpope/vim-surround' }
 
-    -- Markdown
-    use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
 
     -- Debug
     use 'sebdah/vim-delve'
@@ -92,21 +87,12 @@ return packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'saadparwaiz1/cmp_luasnip'
     use "b0o/schemastore.nvim"
-    use({
-      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-      config = function()
-        require("lsp_lines").setup()
-      end,
-    })
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
 
     use 'christoomey/vim-tmux-navigator'
-
-    use 'kyazdani42/nvim-web-devicons'
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

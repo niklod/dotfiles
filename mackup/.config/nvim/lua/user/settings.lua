@@ -41,6 +41,7 @@ vim.opt.showmode = false
 vim.opt.termguicolors = true -- enable 24bit colors
 vim.opt.undofile = true
 vim.opt.wrap = false -- don't wrap text around when the window is too small
+vim.opt.winbar = "%f"
 vim.diagnostic.config({
   virtual_text = false,
 })
