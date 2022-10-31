@@ -53,20 +53,21 @@ return packer.startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'github/copilot.vim'
     use 'powerman/vim-plugin-ruscmd'
+    use 'christoomey/vim-tmux-navigator'
 
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use {'nvim-telescope/telescope-file-browser.nvim' }
+    use 'nvim-telescope/telescope-file-browser.nvim' 
     use 'nvim-telescope/telescope-dap.nvim'
-    use {'gbrlsnchs/telescope-lsp-handlers.nvim' }
+    use 'gbrlsnchs/telescope-lsp-handlers.nvim' 
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'nvim-treesitter/nvim-treesitter-context'
+    use 'p00f/nvim-ts-rainbow'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    use { 'tpope/vim-surround' }
-
+    use  'tpope/vim-surround'
 
     -- Debug
     use 'sebdah/vim-delve'
@@ -92,7 +93,6 @@ return packer.startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
 
-    use 'christoomey/vim-tmux-navigator'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -9,6 +9,7 @@ config.setup {
 	      "lua",
 	      "vim",
 	      "go",
+          "bash"
 	 },
 	highlight = {
 		enable = true,

@@ -370,5 +370,21 @@
         "markdown": false
     },
     "workbench.activityBar.visible": false,
-    "diffEditor.renderSideBySide": false
+    "diffEditor.renderSideBySide": false,
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.focusTerminal",
+            "sequence": [
+                "workbench.action.focusPanel",
+                "workbench.action.focusPanel"
+            ]
+        },
+        {
+            "command": "multiCommand.closeTerminal",
+            "sequence": [
+                "workbench.action.focusActiveEditorGroup",
+                // orkbench.action.closePanel"
+            ]
+        },
+    ]
 }

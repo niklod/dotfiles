@@ -1,7 +1,3 @@
-local v = vim.api
-
-vim.cmd("colorscheme onedark")
-
 vim.opt.guifont = 'SFMono Nerd Font'
 vim.opt.relativenumber = true
 vim.opt.autoread = true
@@ -24,7 +20,7 @@ vim.opt.smarttab = true
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 vim.opt.cursorline = false
 vim.opt.background = 'dark'
 vim.opt.showtabline = 1
@@ -41,7 +37,15 @@ vim.opt.showmode = false
 vim.opt.termguicolors = true -- enable 24bit colors
 vim.opt.undofile = true
 vim.opt.wrap = false -- don't wrap text around when the window is too small
-vim.opt.winbar = "%f"
+vim.opt.fillchars:append({
+    horiz = '━',
+    horizup = '┻',
+    horizdown = '┳',
+    vert = '┃',
+    vertleft = '┨',
+    vertright = '┣',
+    verthoriz = '╋',
+})
 vim.diagnostic.config({
   virtual_text = false,
 })
