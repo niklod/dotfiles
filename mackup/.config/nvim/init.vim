@@ -19,5 +19,6 @@ lua require("user.cmp_autocompletion")
 lua require("user.autopair")
 lua require("user.rainbow")
 lua require("user.one_dark")
+lua require("user.lsp_signature")
 
 autocmd BufWritePre *.go :silent! lua require('go.format').goimport()

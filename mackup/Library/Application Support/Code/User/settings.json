@@ -369,7 +369,6 @@
         "plaintext": false,
         "markdown": false
     },
-    "workbench.activityBar.visible": false,
     "diffEditor.renderSideBySide": false,
     "multiCommand.commands": [
         {

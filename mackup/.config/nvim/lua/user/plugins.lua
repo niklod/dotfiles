@@ -42,6 +42,7 @@ packer.init {
 return packer.startup(function(use)
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua'
+    use 'ray-x/lsp_signature.nvim'
     use 'wbthomason/packer.nvim'
     use "nvim-lua/popup.nvim"
     use 'navarasu/onedark.nvim'
