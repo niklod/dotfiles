@@ -80,6 +80,7 @@ return packer.startup(function(use)
     use 'neovim/nvim-lspconfig'
     use "williamboman/nvim-lsp-installer"
     use 'folke/lsp-colors.nvim'
+    use {'glepnir/lspsaga.nvim', branch="main"}
 
     -- Completion
     use 'hrsh7th/cmp-nvim-lsp'

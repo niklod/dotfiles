@@ -15,6 +15,7 @@ lspinstaller.setup({
     'jdtls',
     'jsonls',
     'yamlls',
+    'pyright'
   },
   automatic_installation = true
 })

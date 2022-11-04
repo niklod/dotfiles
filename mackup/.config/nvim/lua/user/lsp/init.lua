@@ -5,6 +5,7 @@ require 'user.lsp.lua'
 require 'user.lsp.toml'
 require 'user.lsp.yaml'
 require 'user.lsp.bash'
+require 'user.lsp.python'
 
   local signs = {
     { name = "DiagnosticSignError", text = "💢" },

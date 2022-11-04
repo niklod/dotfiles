@@ -1,107 +1,92 @@
-local v = vim.api
-
+local keymap = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 
-v.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>n', ':nohl<CR>', default_opts)
+keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', default_opts)
+keymap('n', '<Leader>n', ':nohl<CR>', default_opts)
 
 --Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Movements
-v.nvim_set_keymap('n', 'n', 'nzzzv', default_opts)
-v.nvim_set_keymap('n', 'N', 'Nzzzv', default_opts)
+keymap('n', 'n', 'nzzzv', default_opts)
+keymap('n', 'N', 'Nzzzv', default_opts)
+keymap('n', 'zz', 'ZZ', default_opts)
 
-v.nvim_set_keymap("n", "H", "^", default_opts)
-v.nvim_set_keymap("n", "L", "$", default_opts)
-v.nvim_set_keymap("v", "H", "^", default_opts)
-v.nvim_set_keymap("v", "L", "$", default_opts)
-v.nvim_set_keymap("o", "H", "^", default_opts)
-v.nvim_set_keymap("o", "L", "$", default_opts)
+keymap({"n","v","o"}, "H", "^", default_opts)
+keymap({"n","v","o"}, "L", "g_", default_opts)
 
-v.nvim_set_keymap("v", "J", ":move '>+1<CR>gv-gv", default_opts)
-v.nvim_set_keymap("v", "K", ":move '<-2<CR>gv-gv", default_opts)
+keymap("v", "J", ":move '>+1<CR>gv-gv", default_opts)
+keymap("v", "K", ":move '<-2<CR>gv-gv", default_opts)
 
-v.nvim_set_keymap("v", "<Leader>p", '"_dP', default_opts)
+keymap("v", "p", '"_dP', default_opts)
 
-v.nvim_set_keymap("n", "<Leader>y", '"+y', default_opts)
-v.nvim_set_keymap("v", "<Leader>y", '"+y', default_opts)
-v.nvim_set_keymap("v", "<Leader>Y", '"+Y', default_opts)
+keymap('n', "Y", "yg_", default_opts)
+keymap('n', "J", "mzJ`z", default_opts)
 
-v.nvim_set_keymap("n", "<Leader>d", '"_d', default_opts)
-v.nvim_set_keymap("v", "<Leader>d", '"_d', default_opts)
+keymap('n', '<C-h>', '<C-w>h', default_opts)
+keymap('n', '<C-j>', '<C-w>j', default_opts)
+keymap('n', '<C-k>', '<C-w>k', default_opts)
+keymap('n', '<C-l>', '<C-w>l', default_opts)
 
-v.nvim_set_keymap('n', "Y", "yg$", default_opts)
-v.nvim_set_keymap('n', "J", "mzJ`z", default_opts)
+keymap('v', '<', '<gv', default_opts)
+keymap('v', '>', '>gv', default_opts)
 
-v.nvim_set_keymap('n', '<C-h>', '<C-w>h', default_opts)
-v.nvim_set_keymap('n', '<C-j>', '<C-w>j', default_opts)
-v.nvim_set_keymap('n', '<C-k>', '<C-w>k', default_opts)
-v.nvim_set_keymap('n', '<C-l>', '<C-w>l', default_opts)
-
-v.nvim_set_keymap('v', '<', '<gv', default_opts)
-v.nvim_set_keymap('v', '>', '>gv', default_opts)
-
-v.nvim_set_keymap('n', '<Leader>a', ':TSTextobjectSwapNext @parameter.inner<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>A', ':TSTextobjectSwapPrevious @parameter.inner<CR>', default_opts)
+keymap('n', '<Leader>a', ':TSTextobjectSwapNext @parameter.inner<CR>', default_opts)
+keymap('n', '<Leader>A', ':TSTextobjectSwapPrevious @parameter.inner<CR>', default_opts)
 
 -- require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
 
--- v.nvim_set_keymap('n', 'fa', ":HopWord<CR>", {})
--- v.nvim_set_keymap('n', 't', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>", default_opts)
--- v.nvim_set_keymap('n', 'T', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>", default_opts)
--- v.nvim_set_keymap('v', 't', ":HopChar2<CR>", {})
+-- keymap('n', 'fa', ":HopWord<CR>", {})
+-- keymap('n', 't', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>", default_opts)
+-- keymap('n', 'T', ":lua require('hop').hint_words({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>", default_opts)
+-- keymap('v', 't', ":HopChar2<CR>", {})
 
-v.nvim_set_keymap('n', '<leader>at', ":GoAddTag", {})
-
-v.nvim_set_keymap('n', '<Leader>so', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)
+keymap('n', '<leader>at', ":GoAddTag", {})
 
 -- Search
-v.nvim_set_keymap('n', 'ff', ':Telescope find_files<CR>', default_opts)
-v.nvim_set_keymap('n', 'fl', ':Telescope live_grep<CR>', default_opts)
-v.nvim_set_keymap('n', 'gr', ':Telescope lsp_references<CR>', default_opts)
-v.nvim_set_keymap('n', 'fs', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)
-v.nvim_set_keymap("n", "fe", "<Cmd>lua require('telescope.builtin').buffers()<CR>", default_opts)
+keymap('n', 'ff', ':Telescope find_files<CR>', default_opts)
+keymap('n', 'fl', ':Telescope live_grep<CR>', default_opts)
+keymap('n', 'gr', ':Telescope lsp_references<CR>', default_opts)
+keymap('n', 'fs', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)
+keymap("n", "fe", "<Cmd>lua require('telescope.builtin').buffers()<CR>", default_opts)
 
 -- Git
-v.nvim_set_keymap('n', '<Leader>gb', ':Telescope git_branches<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>sh', ':Gitsigns stage_hunk<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>uh', ':Gitsigns undo_stage_hunk<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>rh', ':Gitsigns reset_hunk<CR>', default_opts)
-
-v.nvim_set_keymap('n', '<Leader>gd', ':DiffviewOpen<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>gq', ':DiffviewClose<CR>', default_opts)
+keymap('n', '<Leader>gb', ':Telescope git_branches<CR>', default_opts)
+keymap('n', '<Leader>sh', ':Gitsigns stage_hunk<CR>', default_opts)
+keymap('n', '<Leader>uh', ':Gitsigns undo_stage_hunk<CR>', default_opts)
+keymap('n', '<Leader>rh', ':Gitsigns reset_hunk<CR>', default_opts)
 
 -- Debugger
-v.nvim_set_keymap('n', ',d', ':GoDebug<CR>', default_opts)
-v.nvim_set_keymap('n', ',c', [[<Cmd>lua require('dap').continue()<CR>]], default_opts)
-v.nvim_set_keymap('n', ',b', ':GoBreakToggle<CR>', default_opts)
-v.nvim_set_keymap('n', ',t', ':GoDebug -n<CR>', default_opts)
-v.nvim_set_keymap('n', '<Leader>dk', ':GoDbgStop<CR>', default_opts)
+keymap('n', ',d', ':GoDebug<CR>', default_opts)
+keymap('n', ',c', [[<Cmd>lua require('dap').continue()<CR>]], default_opts)
+keymap('n', ',b', ':GoBreakToggle<CR>', default_opts)
+keymap('n', ',t', ':GoDebug -n<CR>', default_opts)
+keymap('n', '<Leader>dk', ':GoDbgStop<CR>', default_opts)
 
-v.nvim_set_keymap('n', '<F5>', [[<Cmd>lua require('dap').step_over()<CR>]], default_opts)
-v.nvim_set_keymap('n', '<F6>', [[<Cmd>lua require('dap').step_into()<CR>]], default_opts)
+keymap('n', '<F5>', [[<Cmd>lua require('dap').step_over()<CR>]], default_opts)
+keymap('n', '<F6>', [[<Cmd>lua require('dap').step_into()<CR>]], default_opts)
 
-v.nvim_set_keymap('v', ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_opts)
-v.nvim_set_keymap('n', ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_opts)
-v.nvim_set_keymap('n', '<Leader>du', [[<Cmd>lua require('dapui').toggle()<CR>]], default_opts)
+keymap({"n","v"}, ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_opts)
+keymap('n', ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_opts)
+keymap('n', '<Leader>du', [[<Cmd>lua require('dapui').toggle()<CR>]], default_opts)
 
-v.nvim_set_keymap('n', '<Leader>dl', [[<Cmd>lua require('dap.ext.vscode').load_launchjs("./launch.json",{})<CR>]], default_opts)
+-- keymap('n', '<Leader>dl', [[<Cmd>lua require('dap.ext.vscode').load_launchjs("./launch.json",{})<CR>]], default_opts)
 
 -- lsp
-v.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", default_opts)
-v.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", default_opts)
-v.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", default_opts)
-v.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", default_opts)
-v.nvim_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", default_opts)
-v.nvim_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", default_opts)
-v.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", default_opts)
-v.nvim_set_keymap("n", "fn", '<cmd>lua vim.diagnostic.goto_prev()<CR>', default_opts)
-v.nvim_set_keymap("n", "gl", '<cmd>lua vim.diagnostic.open_float()<CR>', default_opts)
-v.nvim_set_keymap("n", "fp", '<cmd>lua vim.diagnostic.goto_next()<CR>', default_opts)
-v.nvim_set_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", default_opts)
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", default_opts)
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", default_opts)
+keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", default_opts)
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", default_opts)
+keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", default_opts)
+keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", default_opts)
+keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", default_opts)
+keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", default_opts)
+keymap("n", "fn", '<cmd>Lspsaga diagnostic_jump_prev<CR>', default_opts)
+keymap("n", "gl", '<cmd>Lspsaga show_line_diagnostics<CR>', default_opts)
+keymap("n", "fp", '<cmd>Lspsaga diagnostic_jump_next<CR>', default_opts)
+keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", default_opts)
