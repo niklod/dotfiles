@@ -17,8 +17,8 @@ require('lualine').setup {
       path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
     }
   },
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_x = {'encoding'},
+    lualine_y = {'filetype'},
     lualine_z = {'location'}
   },
   inactive_sections = {

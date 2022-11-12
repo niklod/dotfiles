@@ -2,6 +2,8 @@ set fish_greeting # disable fish greeting
 starship init fish | source
 zoxide init fish | source
 
+alias nv=nvim
+
 set -Ux BAT_THEME Nord 
 set -Ux EDITOR nvim
 set -Ux PAGER ~/.local/bin/nvimpager
@@ -140,7 +142,7 @@ abbr yg "yarn generate"
 abbr yl "yarn lint"
 abbr yt "yarn test"
 abbr yu "yarn ui"
-abbr got "go test -v -run '^\$' ./ &| pp"
+abbr got "go test -v -cover -run '^\$' ./ &| pp"
 abbr t "sh t"
 abbr tt "sh tt"
 

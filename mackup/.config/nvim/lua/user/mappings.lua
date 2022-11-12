@@ -80,7 +80,8 @@ keymap('n', '<Leader>du', [[<Cmd>lua require('dapui').toggle()<CR>]], default_op
 -- lsp
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", default_opts)
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", default_opts)
-keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", default_opts)
+-- keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", default_opts)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", default_opts)
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", default_opts)
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", default_opts)
 keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", default_opts)
