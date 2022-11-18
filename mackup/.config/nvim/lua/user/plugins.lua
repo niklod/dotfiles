@@ -42,7 +42,6 @@ packer.init {
 return packer.startup(function(use)
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua'
-    use 'ray-x/lsp_signature.nvim'
     use 'wbthomason/packer.nvim'
     use "nvim-lua/popup.nvim"
     use 'navarasu/onedark.nvim'
@@ -52,9 +51,9 @@ return packer.startup(function(use)
     use 'tpope/vim-repeat'
     use 'tpope/vim-commentary'
     use 'windwp/nvim-autopairs'
-    use 'github/copilot.vim'
     use 'powerman/vim-plugin-ruscmd'
     use 'christoomey/vim-tmux-navigator'
+    use 'benmills/vim-golang-alternate'
 
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }

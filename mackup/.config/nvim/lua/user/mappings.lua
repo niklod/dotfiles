@@ -38,6 +38,7 @@ keymap('v', '>', '>gv', default_opts)
 
 keymap('n', '<Leader>a', ':TSTextobjectSwapNext @parameter.inner<CR>', default_opts)
 keymap('n', '<Leader>A', ':TSTextobjectSwapPrevious @parameter.inner<CR>', default_opts)
+keymap('n', 'gt', ':A<CR>', default_opts)
 
 -- require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
 
@@ -56,7 +57,6 @@ keymap('n', 'fs', [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()
 keymap("n", "fe", "<Cmd>lua require('telescope.builtin').buffers()<CR>", default_opts)
 
 -- Git
-keymap('n', '<Leader>gb', ':Telescope git_branches<CR>', default_opts)
 keymap('n', '<Leader>sh', ':Gitsigns stage_hunk<CR>', default_opts)
 keymap('n', '<Leader>uh', ':Gitsigns undo_stage_hunk<CR>', default_opts)
 keymap('n', '<Leader>rh', ':Gitsigns reset_hunk<CR>', default_opts)
@@ -67,15 +67,10 @@ keymap('n', ',c', [[<Cmd>lua require('dap').continue()<CR>]], default_opts)
 keymap('n', ',b', ':GoBreakToggle<CR>', default_opts)
 keymap('n', ',t', ':GoDebug -n<CR>', default_opts)
 keymap('n', '<Leader>dk', ':GoDbgStop<CR>', default_opts)
-
 keymap('n', '<F5>', [[<Cmd>lua require('dap').step_over()<CR>]], default_opts)
 keymap('n', '<F6>', [[<Cmd>lua require('dap').step_into()<CR>]], default_opts)
-
 keymap({"n","v"}, ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_opts)
-keymap('n', ',dp', [[<Cmd>lua require('dapui').eval()<CR>]], default_opts)
 keymap('n', '<Leader>du', [[<Cmd>lua require('dapui').toggle()<CR>]], default_opts)
-
--- keymap('n', '<Leader>dl', [[<Cmd>lua require('dap.ext.vscode').load_launchjs("./launch.json",{})<CR>]], default_opts)
 
 -- lsp
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", default_opts)

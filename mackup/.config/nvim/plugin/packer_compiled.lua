@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -133,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
-  },
-  ["lsp_signature.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
-    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
@@ -273,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-delve",
     url = "https://github.com/sebdah/vim-delve"
+  },
+  ["vim-golang-alternate"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-golang-alternate",
+    url = "https://github.com/benmills/vim-golang-alternate"
   },
   ["vim-plugin-ruscmd"] = {
     loaded = true,
