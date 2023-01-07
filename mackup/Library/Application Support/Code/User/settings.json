@@ -385,5 +385,6 @@
                 // orkbench.action.closePanel"
             ]
         },
-    ]
+    ],
+    "window.commandCenter": false
 }

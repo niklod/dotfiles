@@ -21,5 +21,6 @@ lua require("user.lsp_signature")
 lua require("user.autocommands")
 lua require("user.mappings")
 lua require("user.settings")
+lua require("user.mini")
 
 autocmd BufWritePre *.go :silent! lua require('go.format').goimport()

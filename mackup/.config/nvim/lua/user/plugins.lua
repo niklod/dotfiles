@@ -54,6 +54,7 @@ return packer.startup(function(use)
     use 'powerman/vim-plugin-ruscmd'
     use 'christoomey/vim-tmux-navigator'
     use 'benmills/vim-golang-alternate'
+    use 'echasnovski/mini.nvim'
 
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }

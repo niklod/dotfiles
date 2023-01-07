@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
