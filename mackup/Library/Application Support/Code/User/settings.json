@@ -386,5 +386,9 @@
             ]
         },
     ],
-    "window.commandCenter": false
+    "window.commandCenter": false,
+    "gopls": {
+        "formatting.local": "code.moba.live"
+    },
+    "workbench.activityBar.visible": false
 }
