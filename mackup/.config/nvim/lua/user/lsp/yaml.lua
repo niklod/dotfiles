@@ -6,13 +6,6 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local opts = {
   capabilities = capabilities,
   settings = {
-    yaml = {
-      schemas = require('schemastore').json.schemas {
-        select = {
-          'docker-compose.yml',
-        },
-      },
-    },
   }
 }
 

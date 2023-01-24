@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
-  ["lsp-colors.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
-    url = "https://github.com/folke/lsp-colors.nvim"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
@@ -138,11 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["mini.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/mini.nvim",
-    url = "https://github.com/echasnovski/mini.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -189,20 +179,10 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
-  },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -228,11 +208,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["schemastore.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
-    url = "https://github.com/b0o/schemastore.nvim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
