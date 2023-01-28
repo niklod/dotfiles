@@ -13,12 +13,12 @@ autocmd("TextYankPost", {
 })
 
 -- Run goimports after save
-autocmd("BufWritePost", {
-    pattern = "*.go",
-    callback = function(event)
-        vim.cmd("silent !goimports -w -local=\"code.moba.live\" " .. event.match)
-    end
-})
+-- autocmd("BufWritePost", {
+--     pattern = "*.go",
+--     callback = function(event)
+--         vim.cmd("silent !goimports -w -local=\"code.moba.live\" " .. event.match)
+--     end
+-- })
 
 -- Auto Save
 autocmd("BufModifiedSet", {

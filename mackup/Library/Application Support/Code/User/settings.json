@@ -340,8 +340,6 @@
     "terminal.external.osxExec": "Alactirry.app",
     "go.autocompleteUnimportedPackages": true,
     "go.formatTool": "goimports",
-    "go.lintOnSave": "file",
-    "go.lintTool": "revive",
     "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
     "terminal.integrated.defaultProfile.osx": "fish",
     "gitlens.mode.active": "review",
@@ -390,5 +388,6 @@
     "gopls": {
         "formatting.local": "code.moba.live"
     },
-    "workbench.activityBar.visible": false
+    "go.lintTool": "golangci-lint",
+    "go.logging.level": "info",
 }

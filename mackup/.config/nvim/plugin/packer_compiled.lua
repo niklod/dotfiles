@@ -114,16 +114,6 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["go.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/go.nvim",
-    url = "https://github.com/ray-x/go.nvim"
-  },
-  ["guihua.lua"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/guihua.lua",
-    url = "https://github.com/ray-x/guihua.lua"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
@@ -133,6 +123,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -158,11 +163,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -192,7 +192,7 @@ _G.packer_plugins = {
   ["onedark.nvim"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
+    url = "https://github.com/niklod/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -203,11 +203,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
