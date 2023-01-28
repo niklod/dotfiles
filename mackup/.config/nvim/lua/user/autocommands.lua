@@ -6,10 +6,10 @@ local general = augroup("General Settings", { clear = true })
 
 -- Highlight when yanking
 autocmd("TextYankPost", {
-  callback = function()
-    require("vim.highlight").on_yank { higroup = "Visual", timeout = 200 }
-  end,
-  group = general,
+	callback = function()
+		require("vim.highlight").on_yank({ higroup = "Visual", timeout = 200 })
+	end,
+	group = general,
 })
 
 -- Run goimports after save
@@ -22,27 +22,27 @@ autocmd("TextYankPost", {
 
 -- Auto Save
 autocmd("BufModifiedSet", {
-  callback = function()
-    vim.cmd "silent! w"
-  end,
-  group = general,
+	callback = function()
+		vim.cmd("silent! w")
+	end,
+	group = general,
 })
 
 -- Update file
 autocmd("FocusGained", {
-  callback = function()
-    vim.cmd "checktime"
-  end,
-  group = general,
+	callback = function()
+		vim.cmd("checktime")
+	end,
+	group = general,
 })
 
 -- Automatically source vim file whenever you save it
 autocmd("BufWritePost", {
-  pattern = "*.vim",
-  callback = function()
-    vim.cmd "source <afile>"
-  end,
-  group = general,
+	pattern = "*.vim",
+	callback = function()
+		vim.cmd("source <afile>")
+	end,
+	group = general,
 })
 
 -- Highlighting match words when searching

@@ -1,18 +1,18 @@
 local present, config = pcall(require, "nvim-treesitter.configs")
 
 if not present then
-   return
+	return
 end
 
-config.setup {
+config.setup({
 	ensure_installed = {
-	      "lua",
-	      "vim",
-	      "go",
-          "bash"
-	 },
+		"lua",
+		"vim",
+		"go",
+		"bash",
+	},
 	highlight = {
 		enable = true,
 		use_languagetree = true,
-	}
-}
+	},
+})

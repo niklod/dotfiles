@@ -1,6 +1,6 @@
 local ok, align = pcall(require, "mini.align")
 if not ok then
-  return
+	return
 end
 
 align.setup()
