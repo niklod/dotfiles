@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -228,16 +233,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-delve"] = {
-    loaded = true,
-    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-delve",
-    url = "https://github.com/sebdah/vim-delve"
   },
   ["vim-golang-alternate"] = {
     loaded = true,
