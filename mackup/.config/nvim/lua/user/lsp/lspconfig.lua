@@ -14,19 +14,11 @@ require("lspconfig")["gopls"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 	-- Server-specific settings...
-	settings = {
-		gopls = {
-			experimentalPostfixCompletions = true,
-			analyses = {
-				unusedparams = true,
-				fieldalignment = true,
-				nilness = true,
-				unusedwrite = true,
-				assign = true,
-				atomic = true,
-			},
-		},
-	},
+})
+
+local lspconfig = require("lspconfig")
+lspconfig.golangci_lint_ls.setup({
+	filetypes = { "go", "gomod" },
 })
 
 require("lspconfig")["sumneko_lua"].setup({
@@ -39,7 +31,7 @@ require("lspconfig")["sumneko_lua"].setup({
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	-- Disable underline, it's very annoying
 	underline = false,
-	virtual_text = false,
+	virtual_text = true,
 	-- Enable virtual text, override spacing to 4
 	-- virtual_text = {spacing = 4},
 	-- Use a function to dynamically turn signs off

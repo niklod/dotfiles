@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Onedarker.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/Onedarker.nvim",
+    url = "https://github.com/lunarvim/Onedarker.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -119,6 +124,16 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
@@ -138,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neodark.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/neodark.nvim",
+    url = "https://github.com/VDuchauffour/neodark.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -234,10 +254,20 @@ _G.packer_plugins = {
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vim-golang-alternate"] = {
     loaded = true,
     path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-golang-alternate",
     url = "https://github.com/benmills/vim-golang-alternate"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/niklod/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-plugin-ruscmd"] = {
     loaded = true,

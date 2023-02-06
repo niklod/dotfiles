@@ -22,13 +22,13 @@ shift + alt + ctrl - l : yabai -m window --warp east
 # alt - r : yabai -m space --rotate 90
 
 # toggle window fullscreen zoom
-alt - c : yabai -m window --toggle zoom-fullscreen
+alt - d : yabai -m window --toggle zoom-fullscreen
 
 # toggle padding and gap
-alt - b : yabai -m space --toggle padding; yabai -m space --toggle gap
+alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # float / unfloat window and center on screen
-alt - v : yabai -m window --toggle float;\
+alt - f : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
 # toggle window split type
@@ -45,11 +45,11 @@ shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
 shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
 
 # focus space
-alt - a : yabai -m space --focus 1
-alt - s : yabai -m space --focus 2
-alt - d : yabai -m space --focus 3
-alt - f : yabai -m space --focus 4
-alt - g : yabai -m space --focus 5
+ctrl + shift - q : yabai -m space --focus 1
+ctrl + shift - w : yabai -m space --focus 2
+ctrl + shift - e : yabai -m space --focus 3
+ctrl + shift - r : yabai -m space --focus 4
+ctrl + shift - t : yabai -m space --focus 5
 
 # windows hotkey emitation for consistency. Works through zmk macro on keybord
 ctrl + cmd - right : yabai -m space --focus next

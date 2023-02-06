@@ -20,7 +20,6 @@ null_ls.setup({
 	sources = {
 		formatting.stylua,
 		formatting.goimports.with({ extra_args = { "-local", "code.moba.live" } }),
-		diagnostics.golangci_lint,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

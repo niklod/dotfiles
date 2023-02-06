@@ -50,7 +50,7 @@ keymap("n", "gt", ":A<CR>", default_opts)
 keymap("n", "<leader>at", ":GoAddTag", {})
 
 -- Search
-keymap("n", "ff", ":Telescope find_files<CR>", default_opts)
+keymap("n", "ff", ":Telescope git_files<CR>", default_opts)
 keymap("n", "fl", ":Telescope live_grep<CR>", default_opts)
 keymap("n", "gr", ":Telescope lsp_references<CR>", default_opts)
 keymap("n", "fs", [[<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], default_opts)

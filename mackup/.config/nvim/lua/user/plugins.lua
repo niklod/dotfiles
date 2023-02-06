@@ -40,11 +40,10 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- use("ray-x/go.nvim")
-	-- use("ray-x/guihua.lua")
 	use("wbthomason/packer.nvim")
-	-- use("nvim-lua/popup.nvim")
 	use("niklod/onedark.nvim")
+	use("VDuchauffour/neodark.nvim")
+	use("lunarvim/Onedarker.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use("nvim-lua/plenary.nvim")
@@ -55,6 +54,7 @@ return packer.startup(function(use)
 	use("powerman/vim-plugin-ruscmd")
 	use("christoomey/vim-tmux-navigator")
 	use("benmills/vim-golang-alternate")
+	use("RRethy/vim-illuminate")
 
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
@@ -78,6 +78,9 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("folke/trouble.nvim")
+	use("folke/lsp-colors.nvim")
+	use("ray-x/lsp_signature.nvim")
 
 	-- Completion
 	use("hrsh7th/cmp-nvim-lsp")
