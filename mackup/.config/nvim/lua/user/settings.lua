@@ -1,3 +1,4 @@
+vim.g.VimuxUseNearest = 1
 vim.opt.guifont = "SFMono Nerd Font"
 vim.opt.relativenumber = true
 vim.opt.autoread = true

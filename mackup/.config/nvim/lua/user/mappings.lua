@@ -49,6 +49,9 @@ keymap("n", "gt", ":A<CR>", default_opts)
 
 keymap("n", "<leader>at", ":GoAddTag", {})
 
+-- Tests
+keymap("n", "<Leader>dt", ":TestNearest -strategy=vimux -v<CR>")
+
 -- Search
 keymap("n", "ff", ":Telescope git_files<CR>", default_opts)
 keymap("n", "fl", ":Telescope live_grep<CR>", default_opts)

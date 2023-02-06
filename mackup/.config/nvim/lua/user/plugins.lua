@@ -55,6 +55,8 @@ return packer.startup(function(use)
 	use("christoomey/vim-tmux-navigator")
 	use("benmills/vim-golang-alternate")
 	use("RRethy/vim-illuminate")
+	use("vim-test/vim-test")
+	use("preservim/vimux")
 
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
