@@ -19,4 +19,8 @@ keymap("v", "p", '"_dP', default_opts)
 keymap("v", "<", "<gv", default_opts)
 keymap("v", ">", ">gv", default_opts)
 keymap("n", "gt", ":A<CR>", default_opts)
-keymap("n", "<leader>at", ":GoAddTag", {})
+keymap("n", "<leader>at", ":GoAddTag", default_opts)
+
+-- Unbing
+keymap({ "n", "v" }, "<M-j>", "<M-j>", {})
+keymap({ "n", "v" }, "<M-k>", "<M-k>", {})
