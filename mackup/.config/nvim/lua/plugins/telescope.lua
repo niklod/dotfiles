@@ -3,10 +3,15 @@ return -- change some telescope options and a keymap to browse plugin files
 	{
 		"telescope.nvim",
 		dependencies = {
+			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
+			"nvim-telescope/telescope-dap.nvim",
+			"HUAHUAI23/telescope-dapzzzz",
 			build = "make",
 			config = function()
 				require("telescope").load_extension("fzf")
+				require("telescope").load_extension("dap")
+				require("telescope").load_extension("i23")
 			end,
 		},
 	},

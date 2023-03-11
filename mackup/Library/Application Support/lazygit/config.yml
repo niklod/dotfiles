@@ -1,0 +1,8 @@
+git:
+  commitPrefixes:
+    destiny-data-synchronizer: # This is repository folder name
+      pattern: "^(\\w+)\\/(\\w+-\\w+).*"
+      replace: '$1: $2: '
+    spock: # This is repository folder name
+      pattern: "^(\\w+)\\/(\\w+-\\w+).*"
+      replace: '$1: $2: '

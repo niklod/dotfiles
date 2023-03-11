@@ -96,6 +96,7 @@ return {
 				["?"] = "show_help",
 				["<"] = "prev_source",
 				[">"] = "next_source",
+				["/"] = "noop",
 			},
 		},
 	},

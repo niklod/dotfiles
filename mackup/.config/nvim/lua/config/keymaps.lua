@@ -5,6 +5,7 @@
 local keymap = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
+keymap("i", "<C-J>", 'copilot#Accept("")', { silent = true, expr = true })
 keymap({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 keymap("n", "gw", "*N")
 keymap("x", "gw", "*N")
@@ -15,7 +16,6 @@ keymap({ "n", "v", "o" }, "H", "^", default_opts)
 keymap({ "n", "v", "o" }, "L", "g_", default_opts)
 keymap("v", "J", ":move '>+1<CR>gv-gv", default_opts)
 keymap("v", "K", ":move '<-2<CR>gv-gv", default_opts)
-keymap("v", "p", '"_dP', default_opts)
 keymap("v", "<", "<gv", default_opts)
 keymap("v", ">", ">gv", default_opts)
 keymap("n", "gt", ":A<CR>", default_opts)
