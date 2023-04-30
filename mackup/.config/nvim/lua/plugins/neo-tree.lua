@@ -12,6 +12,7 @@ return {
 		},
 		{ "<leader>e", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
 	},
+	dependencies = { "s1n7ax/nvim-window-picker" },
 	deactivate = function()
 		vim.cmd([[Neotree close]])
 	end,
@@ -23,6 +24,22 @@ return {
 				require("neo-tree")
 			end
 		end
+
+		require("window-picker").setup({
+			autoselect_one = true,
+			include_current = false,
+			filter_rules = {
+				-- filter using buffer options
+				bo = {
+					-- if the file type is one of following, the window will be ignored
+					filetype = { "neo-tree", "neo-tree-popup", "notify" },
+
+					-- if the buffer type is one of following, the window will be ignored
+					buftype = { "terminal", "quickfix" },
+				},
+			},
+			other_win_hl_color = "#e35e4f",
+		})
 	end,
 	opts = {
 		filesystem = {
@@ -57,10 +74,10 @@ return {
 				["<esc>"] = "revert_preview",
 				["P"] = { "toggle_preview", config = { use_float = true } },
 				["l"] = "focus_preview",
-				["S"] = "open_split",
-				["s"] = "open_vsplit",
-				-- ["S"] = "split_with_window_picker",
-				-- ["s"] = "vsplit_with_window_picker",
+				-- ["S"] = "open_split",
+				-- ["s"] = "open_vsplit",
+				["S"] = "split_with_window_picker",
+				["s"] = "vsplit_with_window_picker",
 				["t"] = "open_tabnew",
 				-- ["<cr>"] = "open_drop",
 				-- ["t"] = "open_tab_drop",

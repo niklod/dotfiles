@@ -1,3 +1,13 @@
+gui:
+  branchColors:
+    'docs': '#11aaff' # use a light blue for branches beginning with 'docs/'
+    'feature': '#20bd47'
+    'hotfix': '#b03f3f'
+    'chore:': '#fa9025'
+  showIcons: true
+os:
+  editCommand: 'nvim'
+  editCommandTemplate: '{{editor}} +{{line}} -- {{filename}}'
 git:
   commitPrefixes:
     destiny-data-synchronizer: # This is repository folder name
@@ -6,3 +16,5 @@ git:
     spock: # This is repository folder name
       pattern: "^(\\w+)\\/(\\w+-\\w+).*"
       replace: '$1: $2: '
+services:
+  'code.moba.live': 'gitlab:code.moba.live'

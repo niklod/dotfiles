@@ -31,6 +31,13 @@ return {
 			end,
 			remap = true,
 		},
+		{
+			",ds",
+			function()
+				require("dap").disconnect({ terminateDebuggee = true })
+			end,
+			remap = true,
+		},
 	},
 	config = function()
 		local dap = require("dap")
