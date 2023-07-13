@@ -16,6 +16,8 @@ set hlsearch
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
+set relativenumber
+set number
 
 set clipboard+=unnamed
 set clipboard+=ideaput
@@ -64,6 +66,11 @@ nmap gi <Action>(GotoImplementation)
 nmap gr <Action>(GotoReference)
 
 nmap Y y$
+
+nmap H _
+vmap H _
+nmap L $
+vmap L $
 
 nmap ]] :action GotoNextError<CR>
 
