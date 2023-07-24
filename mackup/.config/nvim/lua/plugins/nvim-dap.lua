@@ -11,7 +11,7 @@ return {
 	"mfussenegger/nvim-dap",
 	keys = {
 		{
-			",dd",
+			",dr",
 			function()
 				require("dap").continue()
 			end,
