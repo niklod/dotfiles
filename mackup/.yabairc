@@ -81,6 +81,7 @@ yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^Pritunl$" manage=off
 yabai -m rule --add app="^CleanShot X$" manage=off
 yabai -m rule --add app="^1Password 7$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^Notes$" manage=off
 yabai -m rule --add app="^Photo Booth$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off

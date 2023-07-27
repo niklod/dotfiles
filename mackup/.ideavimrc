@@ -45,7 +45,7 @@ vnoremap J :action MoveLineDown<cr>
 vnoremap K :action MoveLineUp<cr>
 
 nmap ff :action GotoFile<cr>
-nmap fe :action RecentChangedFiles<CR>
+nmap fe :action RecentFiles<CR>
 
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
