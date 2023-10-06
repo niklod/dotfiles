@@ -18,7 +18,8 @@ keymap("v", "K", ":move '<-2<CR>gv-gv", default_opts)
 keymap("v", "<", "<gv", default_opts)
 keymap("v", ">", ">gv", default_opts)
 keymap("n", "gt", ":A<CR>", default_opts)
-keymap("n", "<leader>at", ":GoAddTag", default_opts)
+keymap("n", "<leader>at", ":GoAddTag json <CR>", default_opts)
+keymap("n", "<leader>r", ":GoIfErr<CR>", default_opts)
 
 -- Unbing
 keymap({ "n", "v" }, "<M-j>", "<M-j>", {})
