@@ -8,9 +8,9 @@ return {
 			root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
 			sources = {
 				nls.builtins.formatting.stylua,
-				nls.builtins.formatting.goimports.with({ extra_args = { "-local", "-w", "code.moba.live" } }),
+				nls.builtins.formatting.goimports.with({ extra_args = { "-local", "code.moba.live" } }),
 				nls.builtins.formatting.fixjson.with({ filetypes = { "json" } }),
-				nls.builtins.formatting.sql_formatter.with({ filetypes = { "sql" } }),
+				nls.builtins.formatting.pg_format.with({ filetypes = { "sql" } }),
 			},
 		}
 	end,
