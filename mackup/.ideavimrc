@@ -7,17 +7,21 @@
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-highlightedyank'
+Plug 'vim-scripts/argtextobj.vim'
 
 set scrolloff=7
 set noerrorbells
 set visualbell
 set incsearch
+set ignorecase
 set hlsearch
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 set relativenumber
 set number
+set quickscope
+set ideamarks
 
 set clipboard+=unnamed
 set clipboard+=ideaput
@@ -25,45 +29,13 @@ set clipboard+=ideaput
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
-let mapleader=" "
-
-nnoremap <leader>n :nohl<CR>
-
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-xmap <Leader>p "_dP
-
-nmap <Leader>y "+y
-vmap <Leader>y "+y
-vmap <Leader>Y "+Y
-
-nmap <Leader>d "_d
-vmap <Leader>d "_d
-
-vnoremap J :action MoveLineDown<cr>
-vnoremap K :action MoveLineUp<cr>
-
-nmap ff :action GotoFile<cr>
-nmap fe :action RecentFiles<CR>
-
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-nnoremap <TAB> :action PreviousTab<CR>
-nnoremap <s-TAB> :action NextTab<CR>
-
-nnoremap gt :action GotoTest<CR>
 
 vmap < <gv
 vmap > >gv
-
-nmap <c-o> <Action>(Back)
-nmap <c-i> <Action>(Forward)
-
-nmap gi <Action>(GotoImplementation)
-nmap gr <Action>(GotoReference)
 
 nmap Y y$
 
@@ -72,28 +44,49 @@ vmap H _
 nmap L $
 vmap L $
 
-nmap ]] :action GotoNextError<CR>
+let mapleader=" "
 
-nmap <leader>rn :action RenameElement<CR>
-nmap <leader>rev :action IntroduceVariable<CR>
-vmap <leader>rev :action IntroduceVariable<CR>
-nmap <leader>rem :action ExtractMethod<CR>
-vmap <leader>rem :action ExtractMethod<CR>
-nmap <leader>rm :action Move<CR>
-nmap <leader>ro :action OptimizeImports<CR>
-nmap <leader>rg :action Generate<CR>
+nnoremap <leader>n :nohl<CR>
 
-nmap <leader>rh :action Vcs.RollbackChangedLines<CR>
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-nmap gl <Action>(ShowErrorDescription)
-vmap gl <Action>(ShowErrorDescription)
+vnoremap J :action MoveLineDown<cr>
+vnoremap K :action MoveLineUp<cr>
 
+map <Leader><Leader> :action GotoFile<cr>
+map <Leader>e   <Action>(RecentFiles)
+map <Leader>r   <Action>(ChooseRunConfiguration)
+map <leader>R   <Action>(RenameElement)
+map <Leader>s   <Action>(FileStructurePopup)
+map <Leader>d   <Action>(ChooseDebugConfiguration)
+map <Leader>b   <Action>(ToggleLineBreakpoint)
+map <leader>rh :action Vcs.RollbackChangedLines<CR>
+map <leader>o <Action>(ManageRecentProjects)
+map gl <Action>(ShowErrorDescription)
+map gt <Action>(GotoTest)
+map gi <Action>(GotoImplementation)
+map gr <Action>(GotoReference)
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
+map ]] <Action>(GotoNextError)
+map <TAB> <Action>(PreviousTab)
+map <s-TAB> <Action>(NextTab)
+
+" Extract actions
+map <Leader>xi <Action>(ExtractInterface)
+map <Leader>xs <Action>(ExtractSuperclass)
+map <Leader>xc <Action>(ExtractClass)
+map <Leader>xm <Action>(ExtractMethod)
+
+" fix actions
+nmap <Leader>ff <Action>(ReformatCode)
+nmap <Leader>fi <Action>(OptimizeImports)
+
+" Git
 nmap <leader>gb :action Git.Branches<CR>
-nmap <leader>ga :action Annotate<CR>
 
-" Debug & Run
-nnoremap ,r :action ContextRun<CR>
-nnoremap ,d :action ContextDebug<CR>
-nnoremap ,f :action ChooseRunConfiguration<CR>
-nnoremap ,F :action ChooseDebugConfiguration<CR>
-nnoremap ,b :action ToggleLineBreakpoint<CR>
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+let g:qs_primary_color = '#ff0000'
+let g:qs_secondary_color = '#ff00ff'

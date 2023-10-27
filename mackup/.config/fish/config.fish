@@ -143,6 +143,7 @@ abbr yl "yarn lint"
 abbr yt "yarn test"
 abbr yu "yarn ui"
 abbr got "go test -v -cover -run '^\$' ./ &| pp"
+abbr rp "fd --type file --exec sd ./"
 abbr t "sh t"
 abbr tt "sh tt"
 
