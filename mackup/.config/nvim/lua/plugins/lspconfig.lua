@@ -3,8 +3,9 @@ return {
 	---@class PluginLspOpts
 	init = function()
 		local keys = require("lazyvim.plugins.lsp.keymaps").get()
+		local telescope = require("telescope.builtin")
 
-		keys[#keys + 1] = { "gi", vim.lsp.buf.implementation }
+		keys[#keys + 1] = { "gi", telescope.lsp_implementations }
 	end,
 	opts = {
 		---@type lspconfig.options
@@ -58,6 +59,9 @@ return {
 					enable = true,
 					singleQuote = true,
 				},
+			},
+			marksman = {
+				filetypes = { "markdown", "md" },
 			},
 		},
 	},

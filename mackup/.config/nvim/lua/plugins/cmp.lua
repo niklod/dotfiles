@@ -7,6 +7,7 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
+		"kristijanhusak/vim-dadbod-completion",
 	},
 	opts = function()
 		local cmp = require("cmp")
