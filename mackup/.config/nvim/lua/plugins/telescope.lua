@@ -19,6 +19,10 @@ return -- change some telescope options and a keymap to browse plugin files
 					builtin.find_files({
 						no_ignore = false,
 						hidden = true,
+						file_ignore_patterns = {
+							".git/.*",
+							"node_modules/.*",
+						},
 					})
 				end,
 				desc = "Lists files in your current working directory, respects .gitignore",
@@ -27,7 +31,12 @@ return -- change some telescope options and a keymap to browse plugin files
 				";r",
 				function()
 					local builtin = require("telescope.builtin")
-					builtin.live_grep()
+					builtin.live_grep({
+						file_ignore_patterns = {
+							".git/.*",
+							"node_modules/.*",
+						},
+					})
 				end,
 				desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
 			},
