@@ -54,8 +54,10 @@ nnoremap N Nzzzv
 vnoremap J :action MoveLineDown<cr>
 vnoremap K :action MoveLineUp<cr>
 
-map <Leader><Leader> :action GotoFile<cr>
-map <Leader>e   <Action>(RecentFiles)
+map ;f <Action>(GotoFile)
+map ;r <Action>(FindInPath)
+map fe <Action>(RecentFiles)
+map fs <Action>(ShowNavBar)
 map <Leader>r   <Action>(ChooseRunConfiguration)
 map <leader>R   <Action>(RenameElement)
 map <Leader>s   <Action>(FileStructurePopup)

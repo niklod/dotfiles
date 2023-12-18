@@ -213,6 +213,26 @@ return -- change some telescope options and a keymap to browse plugin files
 			require("telescope").load_extension("file_browser")
 			require("telescope").load_extension("dap")
 			require("telescope").load_extension("i23")
+
+			local function augroup(name)
+				return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+			end
+
+			vim.api.nvim_create_autocmd("VimEnter", {
+				group = augroup("telescope_startup"),
+				callback = function()
+					if vim.fn.argv(0) == "" then
+						require("telescope.builtin").find_files({
+							no_ignore = false,
+							hidden = true,
+							file_ignore_patterns = {
+								".git/.*",
+								"node_modules/.*",
+							},
+						})
+					end
+				end,
+			})
 		end,
 	},
 }
