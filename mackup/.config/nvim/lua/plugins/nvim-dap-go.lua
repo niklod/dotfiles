@@ -1,3 +1,6 @@
+local function all_trim(s)
+	return s:match("^%s*(.-)%s*$")
+end
 return {
 	"leoluz/nvim-dap-go",
 	keys = {
@@ -17,16 +20,41 @@ return {
 		},
 	},
 	config = function()
+		local placeholders = {
+			["${file}"] = function(_)
+				return vim.fn.expand("%:p")
+			end,
+			["${fileBasename}"] = function(_)
+				return vim.fn.expand("%:t")
+			end,
+			["${fileBasenameNoExtension}"] = function(_)
+				return vim.fn.fnamemodify(vim.fn.expand("%:t"), ":r")
+			end,
+			["${fileDirname}"] = function(_)
+				return vim.fn.expand("%:p:h")
+			end,
+			["${fileExtname}"] = function(_)
+				return vim.fn.expand("%:e")
+			end,
+			["${relativeFile}"] = function(_)
+				return vim.fn.expand("%:.")
+			end,
+			["${relativeFileDirname}"] = function(_)
+				return vim.fn.fnamemodify(vim.fn.expand("%:.:h"), ":r")
+			end,
+			["${workspaceFolder}"] = function(_)
+				return vim.fn.getcwd()
+			end,
+			["${workspaceFolderBasename}"] = function(_)
+				return vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+			end,
+			["${env:([%w_]+)}"] = function(match)
+				return os.getenv(match) or ""
+			end,
+		}
+
 		require("dap-go").setup({
-			dap_configurations = {
-				{
-					-- Must be "go" or it will be ignored by the plugin
-					type = "go",
-					name = "Attach remote",
-					mode = "remote",
-					request = "attach",
-				},
-			},
+			dap_configurations = {},
 			delve = {
 				-- the path to the executable dlv which will be used for debugging.
 				-- by default, this is the "dlv" executable on your PATH.

@@ -108,24 +108,6 @@ return {
 					command = "dlv",
 					args = { "dap", "-l", "127.0.0.1:38697" },
 				},
-				enrich_config = function(config, on_config)
-					if config.envFile then
-						local filePath = config.envFile
-
-						for line in io.lines(filePath) do
-							local words = {}
-							for word in string.gmatch(line, "[a-zA-Z0-9_]+") do
-								table.insert(words, word)
-							end
-							if not config.env then
-								config.env = {}
-							end
-							config.env[words[1]] = words[2]
-						end
-					end
-
-					on_config(config)
-				end,
 			}
 		end,
 	},

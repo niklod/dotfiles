@@ -6,7 +6,9 @@ local opt = vim.opt
 
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
-vim.g.spell = true
+vim.g.copilot_proxy = "blade:pqmt5fg12b@188.166.1.235:44455"
 vim.g.copilot_tab_fallback = ""
+
+vim.g.spell = true
 
 opt.conceallevel = 0 -- Enable auto write
