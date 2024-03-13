@@ -4,7 +4,7 @@
         "~/code/notes",
         "~/dotfiles"
     ],
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "One Dark Pro Flat",
     "vim.neovimPath": "/opt/homebrew/bin/nvim",
     "vim.highlightedyank.textColor": "rgba(255, 200, 71, 0.3)",
     "vim.leader": " ",
@@ -17,8 +17,14 @@
     "editor.overviewRulerBorder": false,
     "editor.glyphMargin": true,
     "editor.renderLineHighlight": "none",
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": "single",
     "editor.lineNumbers": "relative",
+    "search.quickOpen.history.filterSortOrder": "recency",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 15,
+    "vscode_custom_css.imports": [
+        "file:///Users/niklod/.config/vscode.css"
+    ],
     // Normal mode block
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -69,7 +75,7 @@
         },
         {
             "before": [
-                "f",
+                ";",
                 "f"
             ],
             "commands": [
@@ -78,7 +84,7 @@
         },
         {
             "before": [
-                "f",
+                ";",
                 "e"
             ],
             "commands": [
@@ -198,6 +204,33 @@
             "commands": [
                 "revealInExplorer"
             ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "g",
+                "_"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
         }
     ],
     // Visual block
@@ -223,7 +256,8 @@
                 "L"
             ],
             "after": [
-                "$"
+                "g",
+                "_"
             ]
         },
         {
@@ -279,7 +313,8 @@
                 "H"
             ],
             "after": [
-                "^"
+                "g",
+                "_"
             ]
         }
     ],
@@ -339,12 +374,14 @@
     "debug.allowBreakpointsEverywhere": true,
     "terminal.external.osxExec": "Alactirry.app",
     "go.autocompleteUnimportedPackages": true,
-    "go.formatTool": "goimports",
+    "go.formatTool": "default",
+    "gopls": {
+        "formatting.local": "code.moba.live"
+    },
     "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
     "terminal.integrated.defaultProfile.osx": "fish",
-    "gitlens.mode.active": "review",
     "window.menuBarVisibility": "toggle",
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "workbench.startupEditor": "none",
     "editor.guides.indentation": false,
     "redhat.telemetry.enabled": false,
@@ -363,11 +400,11 @@
     "github.copilot.advanced": {},
     "github.copilot.enable": {
         "*": true,
-        "yaml": true,
         "plaintext": false,
-        "markdown": false
+        "markdown": false,
+        "scminput": false,
+        "yaml": true
     },
-    "diffEditor.renderSideBySide": false,
     "multiCommand.commands": [
         {
             "command": "multiCommand.focusTerminal",
@@ -385,9 +422,6 @@
         },
     ],
     "window.commandCenter": false,
-    "gopls": {
-        "formatting.local": "code.moba.live"
-    },
     "go.lintTool": "golangci-lint",
     "go.logging.level": "info",
     "cSpell.userWords": [
@@ -413,4 +447,14 @@
         "vyr's",
         "vyrs"
     ],
+    "http.proxyAuthorization": null,
+    "http.proxy": "http://blade:pqmt5fg12b@188.166.1.235:44455/",
+    "gitlens.autolinks": [
+        {
+            "url": "https://mobalytics.atlassian.net/browse/SQD3-<num>",
+            "prefix": "SQD3-"
+        }
+    ],
+    "git.enableSmartCommit": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
 }

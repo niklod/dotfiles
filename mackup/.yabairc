@@ -87,6 +87,7 @@ yabai -m rule --add app="^Photo Booth$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^GoLand$" manage=off
 yabai -m rule --add app="^Stats$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa

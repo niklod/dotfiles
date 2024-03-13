@@ -1,36 +1,23 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+e",
         "command": "revealInExplorer"
-    },
-    {
-        "key": "o",
-        "command": "revealReference",
-        "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
-    },
-    {
-        "key": "enter",
-        "command": "-revealReference",
-        "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
     },
     {
         "key": "ctrl+e",
         "command": "workbench.view.explorer",
         "when": "viewContainer.workbench.view.explorer.enabled"
-    },
-    {
-        "key": "ctrl+shift+e",
-        "command": "-workbench.view.explorer",
-        "when": "viewContainer.workbench.view.explorer.enabled"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "workbench.view.explorer"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "-workbench.view.explorer"
     },
     {
         "key": "ctrl+e",
@@ -40,11 +27,6 @@
     {
         "key": "ctrl+e",
         "command": "-workbench.action.toggleSidebarVisibility",
-        "when": "explorerViewletVisible"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.focusActiveEditorGroup",
         "when": "explorerViewletVisible"
     },
     {
@@ -96,6 +78,16 @@
         "key": "o",
         "command": "list.select",
         "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.alternativeAcceptSelectedQuickOpenItem",
+        "when": "inQuickOpen"
     },
     {
         "key": "y",
