@@ -138,8 +138,18 @@ return -- change some telescope options and a keymap to browse plugin files
 
 			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
 				wrap_results = true,
+				theme = "dropdown",
 				layout_strategy = "horizontal",
-				layout_config = { prompt_position = "top" },
+				layout_config = {
+					width = function(_, cols, _)
+						if cols > 200 then
+							return 170
+						else
+							return math.floor(cols * 0.87)
+						end
+					end,
+					preview_cutoff = 10,
+				},
 				sorting_strategy = "ascending",
 				winblend = 0,
 				mappings = {
@@ -149,23 +159,48 @@ return -- change some telescope options and a keymap to browse plugin files
 					},
 				},
 			})
+
 			opts.pickers = {
 				diagnostics = {
-					theme = "ivy",
+					theme = "dropdown",
 					initial_mode = "normal",
 					layout_config = {
-						preview_cutoff = 9999,
+						width = function(_, cols, _)
+							if cols > 200 then
+								return 170
+							else
+								return math.floor(cols * 0.87)
+							end
+						end,
+						preview_cutoff = 100,
 					},
 				},
 				buffers = {
 					theme = "dropdown",
 					initial_mode = "insert",
 					layout_config = {
-						preview_cutoff = 9999,
-						width = 0.50,
+						width = function(_, cols, _)
+							if cols > 200 then
+								return 170
+							else
+								return math.floor(cols * 0.87)
+							end
+						end,
+						preview_cutoff = 100,
 					},
 				},
 				live_grep = {
+					theme = "dropdown",
+					layout_config = {
+						width = function(_, cols, _)
+							if cols > 200 then
+								return 170
+							else
+								return math.floor(cols * 0.87)
+							end
+						end,
+						preview_cutoff = 100,
+					},
 					mappings = {
 						i = {
 							["<C-f>"] = ts_select_dir_for_grep,
@@ -173,6 +208,20 @@ return -- change some telescope options and a keymap to browse plugin files
 						n = {
 							["<C-f>"] = ts_select_dir_for_grep,
 						},
+					},
+				},
+				find_files = {
+					theme = "dropdown",
+					initial_mode = "insert",
+					layout_config = {
+						width = function(_, cols, _)
+							if cols > 200 then
+								return 170
+							else
+								return math.floor(cols * 0.87)
+							end
+						end,
+						preview_cutoff = 100,
 					},
 				},
 			}
@@ -208,6 +257,7 @@ return -- change some telescope options and a keymap to browse plugin files
 					},
 				},
 			}
+
 			telescope.setup(opts)
 			require("telescope").load_extension("fzf")
 			require("telescope").load_extension("file_browser")
