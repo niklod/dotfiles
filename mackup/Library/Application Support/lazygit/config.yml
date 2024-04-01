@@ -9,6 +9,9 @@ os:
   editCommand: 'nvim'
   editCommandTemplate: '{{editor}} +{{line}} -- {{filename}}'
 git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
   commitPrefixes:
     destiny-data-synchronizer: # This is repository folder name
       pattern: "^(\\w+)\\/(\\w+-\\w+).*"
